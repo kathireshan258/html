@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0;
+				background-color: #212121;
+			}
+
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				color: #FDC518;
+				font-size: 22px;
+				font-family: verdana;
+				letter-spacing: 3px;
+				height: 60px;
+				width: 200px;
+				line-height: 60px;
+				text-align: center;
+				position: relative;
+			}
+
+			a::before {
+				content: "";
+				height: 140%;
+				width: 100%;
+				top: -15%;
+				left: 0;
+				border-right: 2px solid #FDC518;
+				border-left: 2px solid red;
+				position: absolute;
+				transition: all 1s;
+			}
+
+			a::after {
+				content: "";
+				height: 100%;
+				width: 130%;
+				top: 0;
+				left: -14%;
+				border-top: 2px solid red;
+				border-bottom: 2px solid #FDC518;
+				position: absolute;
+				transition: all 1s;
+			}
+
+			a:hover::after {
+				transform: rotateX(180deg);
+			}
+
+			a:hover::before {
+				transform: rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">Hover Me</a>
+	</body>
+</html>

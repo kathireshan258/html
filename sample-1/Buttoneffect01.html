@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				height: 100vh;
+				border: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: sans-serif;
+				background: grey;
+			}
+
+			a{
+				text-decoration: none;
+				padding: 20px 40px;
+				border: 3px solid yellow;
+				color: transparent;
+				Text-transform: uppercase;
+				position:  relative;
+				font-size: 20px;
+				letter-spacing: 2px;
+				overflow: hidden;
+			}
+
+			a:before {
+				content: "Hover Me";
+				text-transform: uppercase;
+				background-color: #363636;
+				color: yellow;
+				top: 0;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: all .5s;
+			}
+
+			a:after {
+				content: "Hover Me";
+				text-transform: uppercase;
+				background-color: #363636;
+				color: yellow;
+				position:  absolute;
+				top: 0;
+				left: -100%;
+				width:  100%;
+				height:  100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				tranform: scale(0);
+				transition: all 0.5s;
+			}
+
+			a:hover:before {
+				left: 100%;
+				transform: scale(0) rotateY(360deg);
+				opacity: 0;
+			}
+
+			a:hover:after {
+				transform: scale(1) rotateY(360deg);
+				left: 0;
+				opacity: 1;
+			}
+		</style>	
+	</head>
+	<body>
+		<a href="#">Hover Me</a>
+	</body>
+</html>
